@@ -1,0 +1,933 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Raleway, sans-serif;
+  text-align: center;
+}
+.dark-background {
+  background-color: #130b0bd7;
+  color: #fff;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 7vh;
+  background-color: rgba(1, 5, 1, 0.92);
+  font-family: Raleway, sans-serif;
+  padding: 10px 20px; /* Update padding */
+  z-index: 1000; /* Ensure the navigation bar is above other content */
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 1150px) {
+  .nav-links {
+      display: none; /* Hide the nav links by default */
+      flex-direction: column; /* Arrange links vertically */
+      position: absolute;
+      top: 7vh; /* Adjust top position */
+      left: 0;
+      background-color: rgba(1, 5, 1, 0.9);
+      width: 100%;
+      padding: 20px;
+      z-index: 100; /* Ensure the menu is on top of other content */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow for dropdown effect */
+      box-sizing: border-box;
+  }
+
+  .menu-toggle {
+      display: flow;
+      background-color: transparent;
+      color: white;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      position: fixed;
+      top: 5px; /* Adjust top position */
+      right: 15px;
+      margin-right: 1px;
+      z-index: 101; /* Ensure the toggle button is above the dropdown menu */
+  }
+}
+
+.body-text {
+  display: flex;
+  font-family: Raleway, sans-serif;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px; /* Reduce margin-top for closer proximity to the slider */
+}
+
+.card {
+  width: 28%;
+  height: 100%;
+  background-color: #252525;
+  border-radius: 20px;
+  margin: 200px auto;
+  position: absolute;
+  left: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 5px 5px 10px #2f2a2a;
+}
+.card1 {
+  width: 70%;
+  height: 100%;
+  background-color: #252525;
+  border-radius: 20px;
+  margin: 200px auto;
+  position: absolute;
+  right: 0; /* Positioning the element on the right side */
+  top: 0px; /* Adjust this value based on your navigation bar height */
+  bottom: 0; /* Ensures the card stretches to the bottom of the viewport */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  
+  box-shadow: 5px 5px 10px #2f2a2a;
+
+}
+
+
+.card {
+  top: 0;
+  bottom: 0;
+}
+
+h1, h2 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 19px;
+}
+.card p {
+  color: #fffcfc;
+  text-align: start;
+}
+.btn {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 10px;
+  justify-content: center;
+  align-self: center;
+}
+.btn button {
+  border: none;
+  outline: none;
+  padding: 20px;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: #082032;
+  cursor: pointer;
+}
+
+input {
+  background-color: rgb(153, 152, 152);
+  color: white;
+  margin: auto;
+  border: none;
+  outline: none;
+  padding: 10px 90px;
+   border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  text-transform: capitalize;
+}
+
+
+
+.small-image {
+  max-width: 10%; 
+  height: auto;   
+}
+
+
+.container{
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+}
+
+.board{
+  /* max-width: 987px; */
+  width: 100%;
+  background-color: var(--color-dark);
+  text-align: center;
+  border-radius: 8px;
+  padding: 4em 0;
+}
+
+.text-light{
+  color: var(--color-light);
+}
+
+
+
+
+
+.thank-you h3 {
+  padding-top: 40px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  animation: animateText 3s linear infinite;
+}
+
+/* Animation for "Thank You" text */
+@keyframes animateText {
+  0% {
+      color: black;
+  }
+  25% {
+      color: dimgray;
+  }
+  50% {
+      color: rgba(47, 79, 79, 0.8);
+  }
+  75% {
+      color: darkgray ;
+  }
+  100% {
+      color: white;
+  }
+}
+
+footer{
+  width: 100%;
+  margin-top: 10%;
+  background-color: black;
+  /* padding:.25em 1em; */
+}
+
+.additional-links ul {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.additional-links ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.additional-links ul li a {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  padding: 12px;
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.additional-links ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#copyright{
+  /* margin-left:20px; */
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.social-menu ul{
+  display: flex;
+  padding:20px;
+}
+
+.social-menu ul li{
+  list-style: none;
+  display:inline-block;
+  margin: 0 15px;
+}
+
+.social-menu ul li .fab{
+  font-size: 25px;
+  line-height: 40px;
+  transition: .3s;
+  color: #000;
+
+}
+.social-menu{
+  width: 100%;
+}
+
+.social-menu ul li .fab:hover{
+  color: #fff;
+}
+
+.social-menu ul li a{
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  transition: .6s;
+  box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.social-menu ul li a:hover{
+  transform: translate(0, -10%);
+}
+
+.social-menu ul li:nth-child(1) a:hover{
+  background-color: #4267B2;
+}
+.social-menu ul li:nth-child(2) a:hover{
+  background-color: #E4405F;
+}
+.social-menu ul li:nth-child(3) a:hover{
+  background-color: #00ACEE;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+.social-icons li {
+  margin: 0 10px;
+}
+
+
+.box{
+  background: black;
+  display: flex;
+  justify-content: center; /* Add this line */
+  border-radius: 10px;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  list-style: none;
+  margin-left: auto;
+}
+
+.nav-links li {
+  margin-left: 10px;
+  list-style: none; /* Remove list-style from individual li elements */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 14px 16px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover:not(.active) {
+  color: white;
+  text-shadow: 0 0 10px white;
+  cursor: pointer;
+}
+
+.nav-links .active {
+  background-color: rgba(47, 79, 79, 0.7);
+  padding: 10px 16px;
+  border-radius: 5px;
+}
+
+.navbar-buttons {
+  display: flex;
+  align-items: center; /* Align buttons vertically center */
+  margin-right: 20px;
+  margin-left: auto; /* Move buttons to the right */
+}
+
+.login-btn {
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: auto;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.login-btn:hover {
+  color: white;
+  text-shadow: 0 0 10px white;
+  cursor: pointer;
+}
+
+#signUpBtn{
+  padding: 8px 15px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 20px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#signUpBtn a {
+  font-family: Raleway, sans-serif;
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+
+#signUpBtn:hover {
+  color: white;
+  text-shadow: 0 0 20px white;
+  cursor: pointer;
+} /* Change background color on hover */
+
+/*-----------------------------------------------------------------------------*/
+
+.menu-toggle{
+  display: none;
+}
+
+
+/* Media query for small screens */
+/* Media query for small screens */
+@media screen and (max-width: 984px) {
+  .nav-links {
+      display: none; /* Hide the nav links by default */
+      flex-direction: column; /* Arrange links vertically */
+      position: absolute;
+      top: 8vh; /* Adjust top position to align with navbar */
+      left: 0;
+      background-color:rgba(1, 5, 1, 0.9);
+      width: 100%;
+      padding: 20px;
+      z-index: 100; /* Ensure the menu is on top of other content */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow for dropdown effect */
+      box-sizing: border-box;
+  }
+
+  .nav-links.active {
+      display: flex; /* Display nav links when active */
+  }
+
+  .nav-links li {
+      margin-bottom: 10px;
+  }
+
+  .menu-toggle {
+      display: block;
+      background-color: transparent;
+      padding: 0.3% 0.5%;
+      color: white;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      position: absolute;
+      top: 1px; /* Adjust top position to align with navbar */
+      right: 20px;
+      margin-right: 1px;
+      z-index: 101; /* Ensure the toggle button is above the dropdown menu */
+  }
+
+  .menu-toggle:hover {
+      color: white;
+      text-shadow: 0 0 10px white;
+      cursor: pointer;
+  }
+
+  .menu-toggle:focus {
+      outline: none; /* Remove outline on focus */
+  }
+
+  .nav-links a {
+      color: white;
+      text-decoration: none;
+      letter-spacing: 3px;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 14px 16px;
+      display: block; /* Make each link a block element */
+      transition: background-color 0.3s ease; /* Add transition effect */
+  }
+
+  .nav-links a:hover:not(.active) {
+      background-color: rgba(211, 211, 211, 0.9); /* Change background color on hover */
+      color: black;
+      border-radius: 5px;
+  }
+
+
+  .nav-links .active a {
+      padding: 14px 16px;
+      background-color: rgba(47, 79, 79, 0.5); /* Highlight active link across the full row */
+  }
+
+  #signUpBtn{
+      margin-right: 15px;
+  }
+
+  #userPoints {
+      padding: 1px 5px; /* Fallback padding for smaller screens */
+  }
+}
+
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+#productDropdown {
+  padding: 10px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-bar-controls {
+  margin-left: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #050505;
+  color: #fff;
+  margin-right: 5px;
+}
+
+
+
+
+
+/* Additional Styles for dropdown arrow */
+.select-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.select-wrapper:after {
+  content: "\25BC";
+  font-size: 12px;
+  color: #555;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.left-section {
+  color: #ccc;
+  width: 45%;
+}
+
+.right-section {
+  width: 45%;
+}
+
+
+/* slider section  */
+
+.slider{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  margin-top: 0
+}
+.slider .list .item{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0 0 0 0;
+}
+.slider .list .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider .list .item .content{
+  position: absolute;
+  top: 20%;
+  width: 1140px;
+  max-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 20%;
+  box-sizing: border-box;
+  color:whitesmoke;
+  text-shadow: 0 5px 10px #0004;
+}
+
+.slider .list .item .content .title,
+.slider .list .item .content .type{
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1.3em;
+}
+.slider .list .item .type{
+  color: #ffffffcb;
+}
+.slider .list .item .button{
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  grid-template-rows: 40px;
+  gap: 5px;
+  margin-top: 20px;
+}
+.slider .list .item .button button{
+  border: none;
+  background-color: #eee;
+  font-family: Poppins;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.4s;
+  letter-spacing: 2px;
+}
+
+
+
+.slider .list .item .button button:nth-child(2){
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #eee;
+}
+
+/* Thumbnail Section  */
+.thumbnail{
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: max-content;
+  z-index: 100;
+  display: flex;
+  gap: 20px;
+}
+
+.thumbnail .item{
+  width: 150px;
+  height: 100px;
+  flex-shrink: 0;
+  position: relative;
+}
+.name {
+  color: rgb(139, 118, 118); /* Set text color */
+  font-size: 20px; /* Set font size */
+  font-weight: bold; /* Set font weight */
+
+}
+
+.thumbnail .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 5px 0 15px rgba(192, 191, 191, 0.3);
+}
+
+/* nextPrevArrows Section  */
+.nextPrevArrows{
+  position: absolute;
+  top: 80%;
+  right: 52%;
+  z-index: 100;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.nextPrevArrows button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #000000cb;
+  border: none;
+  color: #fff;
+  font-family: monospace;
+  font-weight: bold;
+  transition: .5s;
+  cursor: pointer;
+}
+.nextPrevArrows button:hover{
+  background-color: #fff;
+  color: #000;
+}
+
+/* Animation Part */
+.slider .list .item:nth-child(1){
+  z-index: 1;
+}
+
+
+/* animation text in first item */
+.slider .list .item:nth-child(1) .content .title,
+.slider .list .item:nth-child(1) .content .type,
+.slider .list .item:nth-child(1) .content .description,
+.slider .list .item:nth-child(1) .content .buttons
+{
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+  to{
+      transform: translateY(0px);
+      filter: blur(0px);
+      opacity: 1;
+  }
+}
+
+/* Animation for next button click */
+.slider.next .list .item:nth-child(1) img{
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  border-radius: 150px;
+  animation: showImage .5s linear 1 forwards;
+}
+
+@keyframes showImage{
+  to{
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+  }
+}
+
+
+
+
+
+
+.slider.next .thumbnail{
+  animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+  from{
+      transform: translateX(150px);
+  }
+}
+
+/* Animation for prev button click */
+.slider.prev .list .item:nth-child(2){
+  z-index: 2;
+}
+
+.slider.prev .list .item:nth-child(2) img{
+  animation: outFrame 0.5s linear 1 forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@keyframes outFrame{
+  to{
+      width: 150px;
+      height: 220px;
+      bottom: 50px;
+      left: 50%;
+      border-radius: 20px;
+  }
+}
+
+.slider.prev .thumbnail .item:nth-child(1){
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail .5s linear 1 forwards;
+}
+.slider.next .nextPrevArrows button,
+.slider.prev .nextPrevArrows button{
+  pointer-events: none;
+}
+
+
+.slider.prev .list .item:nth-child(2) .content .title,
+.slider.prev .list .item:nth-child(2) .content .type,
+.slider.prev .list .item:nth-child(2) .content .description,
+.slider.prev .list .item:nth-child(2) .content .buttons
+{
+  animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+  to{
+      transform: translateY(-150px);
+      filter: blur(20px);
+      opacity: 0;
+  }
+}
+@media screen and (max-width: 678px) {
+  .slider .list .item .content{
+      padding-right: 0;
+  }
+  .slider .list .item .content .title{
+      font-size: 50px;
+  }
+}
+
+
+.search-bar-controls {
+  margin-top: 10px;
+}
+
+/* -------------------------------------- */
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-bottom: 5px;
+  color: #e8eef1;
+}
+p {
+  color: #ffffff;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+textarea {
+  background-color: rgb(153, 152, 152);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #111111;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+
+/* ------------------------- */
+#buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 280px; /* Set the maximum width for the buttons */
+  margin: 0 auto; /* Center the buttons */
+}
+
+#buttonContainer input[type="submit"],
+#buttonContainer input[type="button"] {
+  flex: 1; /* Make both buttons take up equal space */
+  margin: 0 5px; /* Add margin to create space between buttons */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000000;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.left-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 5px; /* Adjust the gap between items */
+}
+
+.product-card {
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(14, 13, 13);
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: row; /* Change to row */
+  align-items: center; /* Center align items vertically */
+}
+
+.product-image {
+  max-width: 50%; /* Adjust the max-width of the image */
+  height: 200%; /* Ensure height adjusts accordingly */
+  margin-right: 10px; /* Add some space between image and text */
+}
+
+.product-name {
+  color: #746c6c;
+  font-size: 5px; /* Adjust font size */  
+  margin: 0;
+}
+.title{
+  color: #6a706a;
+}
+.comment{
+  font-size: 50px;
+  color: #635f5f;
+}

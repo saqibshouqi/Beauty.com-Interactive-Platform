@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- Meta tags for character set and viewport -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Linking Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,133;1,133&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
+        <!-- Custom CSS file -->
+        <link rel="stylesheet" href="styles/AboutUs.css">
+
+        <script src="scripts/AboutUs.js"></script>
+
+        <link rel="icon"  type="image/png"  href="img/Blogo.jpg">
+
+        <!-- Font Awesome for icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+
+        <title>About Us</title>
+
+    </head>
+
+
+    <body>
+
+        <!-- Section 1: Navigation -->
+        <section id="section1">
+            <div class="section-content">
+
+                <!-- Navbar content -->
+                <nav>
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="presentationPage.html">
+                            <img src="img/logoImage.jpg" alt="..." height="36">
+                        </a>
+                        <button class="menu-toggle">☰</button>
+                    </div>
+
+
+                    <ul class="nav-links">
+                        <li><a href="main.html">Home</a></li>
+                        <li><a href="Products.html">Products</a></li>
+                        <li><a href="GalleryPage.html">Gallery</a></li>
+                        <li><a href="Quiz.html" >Quiz</a></li>
+                        <li><a href="review.html">Review</a> </li>
+                        <li><a href="Support.html">Support</a></li>
+                        <li><a href="AboutUs.html" class="active">About</a></li>
+                    </ul>
+
+
+                    <div class="navbar-buttons">
+                        <button class="login-btn"><i class="fas fa-user"></i></button>
+                        <button id="signUpBtn"><a href="SignUpPage.html">Sign Up</a></button>
+                        <button class="cart_button"><i class="fas fa-shopping-cart"></i></button>
+                    </div>
+
+
+                </nav>
+            </div>
+        </section>
+
+        
+
+
+        <!-- Font size increase and decrease buttons -->
+        <div class="button-container">
+            <img src="img/Circled_plus.svg.png" class="logo button" alt="Increase Font" onclick="fontChange('increase')">
+            <img src="img/Circled_minus.svg.png" class="logo button" alt="Decrease Font" onclick="fontChange('decrease')">
+        </div>
+
+
+        
+        <!-- Section 2: About Us Content -->
+        <section id="section2">
+
+            <!-- First area content (About Us) -->
+            <div class="firstArea">
+                <h1>About Us</h1>
+                <p class="paragraph"><i> Beauty.com</i> is the go-to place for a wide range of boys' haircuts and girls' makeup. Our commitment is to enable everyone, regardless of gender, to explore and express their unique beauty. With our wide range of services, we invite you to find the perfect look that reflects who you really are. Beauty knows no boundaries at Beauty.com.</p>
+            </div>
+
+            <!-- First area image -->
+            <div class="first_image_div">
+                <img class="first_image" src="img/image1.jpg" alt="first_area_image">
+            </div>
+
+             <!-- Second area content (Our Services) -->
+            <div class="secondArea">
+                <h1>Our Services</h1>
+                <p class="paragraph">"At <i> Beauty.com</i>, we offer a wide variety of grooming services to suit every individual's needs. From classic haircuts to modern styles, our expert stylists specialize in creating personalized haircuts for men that reflect their unique personalities and preferences. For women, our Makeup artists offer a wide range of beauty solutions, from subtle enhancements to dramatic transformations.</p>                    
+                
+                <!-- Second area image -->
+                <div class="second_image_div">
+                    <img class="second_image" src="img/image2.jpg" alt="second_area_image">
+                </div>
+
+            </div>           
+
+
+
+            <!-- Third area content (Mission Statement) -->
+            <div class="thiredArea">
+                <h2 class="paragraph1">Our mission is to inspire confidence and celebrate diversity through beauty. We believe in providing content and innovative solutions that empower individuals to express themselves authentically.</h2>
+                <p class="paragraph">An excerpt from our team</p>
+            </div>
+
+            
+    
+            <!-- Fourth area content (Team Members) -->
+            <div class="fourthArea">
+                <h1>Team Members</h1>
+                    <div class="wrapper1">
+                        <div class="image">
+                            <img src="img/saqib.jpg" alt="img_saqib">
+                            <div class="content">
+                                <h2>Saqib</h2>
+                                <p>Student 1</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="wrapper2">
+                        <div class="image">
+                            <img src="img/nelishka.jpg" alt="img_Nelishka">
+                            <div class="content">
+                                <h2>Nelishka</h2>
+                                <p>Student 2</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="wrapper3">
+                        <div class="image">
+                            <img src="img/anupama.jpg" alt="img_Hirudika">
+                            <div class="content">
+                                <h2>Hirudika</h2>
+                                <p>Student 3</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="wrapper4">
+                        <div class="image">
+                            <img src="img/angathan.jpg" alt="img_Angathan">
+                            <div class="content">
+                                <h2>Angathan</h2>
+                                <p>Student 4</p>
+                            </div>
+                        </div>             
+                    </div>
+            </div>          
+        </section>
+
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="social-menu">
+                <ul class="social-icons">
+                    <li><a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <div class="footerLogo">
+                    <img src="img/LOGObg.png" alt="..." height="50">
+                </div>
+            </div>
+            <div class="additional-links">
+                <ul>
+                    <li><a href="Support.html">Contact us</a></li>
+                    <li><a href="AboutUs.html">About us</a></li>
+                    <li><a href="editor3.html">Editors page</a></li>
+                </ul>
+            </div>
+            <div class="thank-you">
+                <h3>Thank You! for visiting our website</h3>
+            </div>
+            <div id="copyright">copyright &#169 2024, Beauty.com</div>
+        </footer>
+
+
+
+
+        <!-- Custom Java Script file -->
+         <script src="scripts/AboutUs.js"></script>
+
+
+
+    </body>
+</html>

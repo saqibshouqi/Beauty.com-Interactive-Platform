@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty.com | Presentation Page</title>
+
+    <link rel="icon"  type="image/png"  href="img/Blogo.jpg">
+
+
+    <style>
+
+        #logo {
+            width:300px;
+            text-align: center;
+        }
+
+        #logoContainer {
+            background-color: black;
+        }
+
+        h1,#intro {
+            text-align: center;
+        }
+
+        h1{
+            font-size: 40px;
+            color: goldenrod;
+        }
+
+        #intro {
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        body{
+            color: white;
+            background-image: url("img/fashion shop.jpg") ;
+            backdrop-filter: blur(5px); 
+            background-repeat: no-repeat ;
+            background-size: cover;
+            margin:0;
+            padding: 0;
+            font-family: Raleway, sans-serif;
+
+        }
+
+
+
+        #logoContainer, #makeupAdvisor  {
+            text-align: center;
+        }
+
+        
+
+
+ 
+
+        .horizontalLine {
+            width : 100%;
+            height: 3px;
+            background-color: white;
+        }
+
+
+
+
+        .ourTeam {
+            margin-left: 20px;
+            font-size: 24px;            
+        }
+
+        .teamList {
+            list-style-type: none;
+            font-size: 24px;
+            
+        }
+
+        @keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+
+
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div id="logoContainer">
+        <img id="logo" src="img/Logo.jpg" alt="Logo of Beauty.com">
+
+
+    </div>
+
+    
+
+
+
+    
+    <h1>Welcome to Beauty.com</h1>
+   
+    <p id="intro">Discover your perfect look, virtually!<p>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+
+    <div id="makeupAdvisor">
+              
+        <p class="ourTeam">Our team: 
+        <ul class="teamList">
+
+            <li>Saqib Shouqi</li>
+
+            <li>Nelishka Dabare</li>
+
+            <li>Hirudika Anupama</li>
+
+            <li>Angathan Peranantham</li>
+        </ul>
+        </p>
+
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+<script>
+        // Function to redirect to the main page after a certain delay
+        function redirectToMainPage() {
+       
+        // Apply fade out animation to the body
+        document.body.style.animation = "fadeOut 1s ease-in-out";
+      
+        // Set a timeout to redirect to the main page after the animation duration
+        setTimeout(function() {
+            // Redirect to the main page (main.html)
+          window.location.href = "main.html";
+        }, 1000); // Wait for 1000 milliseconds (1 second) before redirecting
+      }
+      
+      // Set a timeout to call redirectToMainPage function after 5000 milliseconds (5 seconds)
+      setTimeout(redirectToMainPage, 5000);
+      
+</script>
+
+
+
+
+</body>
+</html>

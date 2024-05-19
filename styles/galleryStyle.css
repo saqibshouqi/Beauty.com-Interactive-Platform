@@ -1,0 +1,443 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling for body text */
+.body-text {
+    display: flex;
+    font-family: Raleway, sans-serif;
+    align-items: center;
+    justify-content: center;
+    margin-top: 250px; /* Position text at the center of the page */
+}
+
+/* Styling for the body */
+body {
+    background-image: url('../img/119.jpg'); /* Set background image */
+    backdrop-filter: blur(5px); /* Apply blur effect */
+    font-family: Raleway, sans-serif;
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+}
+
+/* Navigation styling */
+nav {
+    position: fixed; /* Fix navigation bar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 7vh;
+    background-color: rgba(1, 5, 1, 0.92); /* Semi-transparent black background */
+    font-family: Raleway, sans-serif;
+    padding: 0 20px; /* Add padding to the sides */
+    z-index: 1000; /* Ensure navigation appears above other content */
+}
+
+/* Styling for the navbar header */
+.navbar-header {
+    padding-left: 50px;
+    padding-top: 15px;
+}
+
+/* Styling for the navigation links */
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    list-style: none;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin-left: 10px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 14px 16px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover:not(.active) {
+    color: white;
+    text-shadow: 0 0 10px white;
+    cursor: pointer;
+}
+
+.nav-links .active {
+    background-color: rgba(47, 79, 79, 0.7);
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+
+/* Styling for the navbar buttons */
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: auto;
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: auto;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.login-btn:hover {
+    color: white;
+    text-shadow: 0 0 10px white;
+    cursor: pointer;
+}
+
+#signUpBtn {
+    padding: 8px 15px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 5px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#signUpBtn a {
+    font-family: Raleway, sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+
+#signUpBtn:hover {
+    color: white;
+    text-shadow: 0 0 20px white;
+    cursor: pointer;
+}
+
+/* Styling for the cart button */
+.navbar-buttons .cart-btn {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+}
+
+.navbar-buttons .cart-btn:hover {
+    color: white;
+    text-shadow: 0 0 10px white;
+    cursor: pointer;
+}
+
+.menu-toggle{
+    display: none;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 1150px) {
+    .nav-links {
+        display: none; /* Hide the nav links by default */
+        flex-direction: column; /* Arrange links vertically */
+        position: absolute;
+        top: 8vh; /* Adjust top position to align with navbar */
+        left: 0;
+        background-color: rgba(1, 5, 1, 0.9);
+        width: 100%;
+        padding: 20px;
+        z-index: 100; /* Ensure the menu is on top of other content */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for dropdown effect */
+        box-sizing: border-box;
+    }
+
+    .nav-links.active {
+        display: flex; /* Display nav links when active */
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: flow;
+        background-color: transparent;
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        position: fixed;
+        top: 7px;
+        right: 15px;
+        margin-right: 1px;
+        z-index: 101;
+    }
+
+    .menu-toggle:hover {
+        color: white;
+        text-shadow: 0 0 10px white;
+        cursor: pointer;
+    }
+
+    .menu-toggle:focus {
+        outline: none;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 14px 16px;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover:not(.active) {
+        background-color: rgba(211, 211, 211, 0.9); /* Change background color on hover */
+        color: black;
+        border-radius: 5px;
+    }
+
+    .nav-links .active a {
+        padding: 14px 16px;
+        background-color: rgba(47, 79, 79, 0.5); /* Highlight active link across the full row */
+    }
+
+    #signUpBtn {
+        margin-right: 15px;
+    }
+
+    #userPoints {
+        padding: 1px 5px; /* Fallback padding for smaller screens */
+    }
+
+    .navbar-buttons {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .logo {
+        margin-right: auto; /* Move the logo to the far left */
+    }
+
+    .login-btn,
+    #signUpBtn,
+    .cart-btn {
+        margin-left: 6px; /* Add space between each button */
+    }
+}
+
+/* Styling for the container */
+.container {
+    max-width: 90%; /* Limit container width */
+    margin: 0 auto; /* Center container horizontally */
+    padding: 20px; /* Add padding inside the container */
+}
+
+/* Styling for the title */
+.title {
+    text-align: center; /* Center-align text */
+    margin-bottom: 20px; /* Add space below title */
+}
+
+/* Gallery Styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%; /* Ensures full width */
+    margin: 0 auto; /* Center gallery horizontally */
+}
+
+.gallery img {
+    width: calc(33.33% - 5px); /* Adjust image width and account for gap */
+    margin-bottom: 10px; /* Add space below images */
+    border-radius: 5%; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.gallery img:nth-child(4) {
+    width: calc(45% - 2.5px); /* Maintain original width */
+}
+
+.gallery img:nth-child(5) {
+    width: calc(55% - 10px); /* Maintain original width */
+}
+
+/* Styling for image details */
+.image-details {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.image-details img {
+    width: 40%; /* Set image width */
+    border-top-left-radius: 5%; /* Rounded corners for top left */
+    border-bottom-left-radius: 5%; /* Rounded corners for bottom left */
+}
+
+.image-description {
+    padding: 20px; /* Add padding around image description */
+    width: 50%; /* Set width for image description */
+}
+
+/* Styling for "Thank You" text */
+.thank-you h3 {
+    padding-top: 40px; /* Add padding above text */
+    text-align: center; /* Center-align text */
+    font-family: Raleway, sans-serif; /* Set font family */
+    font-size: 1em; /* Set font size */
+    animation: animateText 3s linear infinite; /* Apply text animation */
+}
+
+/* Animation for "Thank You" text */
+@keyframes animateText {
+    0% {
+        color: black; /* Initial color */
+    }
+    25% {
+        color: dimgray; /* Intermediate color */
+    }
+    50% {
+        color: rgba(47, 79, 79, 0.8); /* Intermediate color */
+    }
+    75% {
+        color: darkgray; /* Intermediate color */
+    }
+    100% {
+        color: white; /* Final color */
+    }
+}
+
+/* Styling for the footer */
+footer {
+    margin-top: 10%; /* Add space above footer */
+    background-color: black; /* Set background color */
+    padding: 0.25em 1em; /* Add padding */
+}
+
+.additional-links ul {
+    padding-top: 20px; /* Add padding above additional links */
+    text-align: center; /* Center-align links */
+}
+
+.additional-links ul li {
+    display: inline-block; /* Display links inline */
+    margin: 0 5px; /* Add margin between links */
+}
+
+.additional-links ul li a {
+    font-family: Raleway, sans-serif; /* Set font family */
+    padding: 12px; /* Add padding to links */
+    background-color: transparent; /* Set background color */
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set text color */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.additional-links ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Change background color on hover */
+}
+
+/* Styling for copyright */
+#copyright {
+    padding-top: 20px; /* Add padding above copyright text */
+    padding-bottom: 10px; /* Add padding below copyright text */
+    font-size: 15px; /* Set font size */
+    display: flex; /* Display content as a flexbox */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+    color: white; /* Set text color */
+}
+
+/* Social menu styling */
+.social-menu ul {
+    display: flex; /* Display items as a flexbox */
+    padding: 20px; /* Add padding */
+}
+
+.social-menu ul li {
+    list-style: none; /* Remove bullet points */
+    display: inline-block; /* Display items inline */
+    margin: 0 15px; /* Add margin between items */
+}
+
+.social-menu ul li .fab {
+    font-size: 25px; /* Set font size */
+    line-height: 40px; /* Set line height */
+    transition: .3s; /* Smooth transition */
+    color: #000; /* Set icon color */
+}
+
+.social-menu ul li .fab:hover {
+    color: #fff; /* Change icon color on hover */
+}
+
+.social-menu ul li a {
+    position: relative; /* Set position to relative */
+    display: block; /* Display as block element */
+    width: 40px; /* Set width */
+    height: 40px; /* Set height */
+    border-radius: 50%; /* Make round */
+    background-color: #fff; /* Set background color */
+    text-align: center; /* Center-align text */
+    transition: .6s; /* Smooth transition */
+    box-shadow: 0 5px 4px rgba(0, 0, 0, .5); /* Add box shadow */
+}
+
+.social-menu ul li a:hover {
+    transform: translate(0, -10%); /* Move icon up on hover */
+}
+
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #4267B2; /* Change background color on hover */
+}
+
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #E4405F; /* Change background color on hover */
+}
+
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #00ACEE; /* Change background color on hover */
+}
+
+.social-icons {
+    display: flex; /* Display items as a flexbox */
+    justify-content: center; /* Center-align items */
+}
+
+.social-icons li {
+    margin: 0 10px; /* Add margin between items */
+}
+
+/* Styling for the box */
+.box {
+    background: black; /* Set background color */
+    display: flex; /* Display items as a flexbox */
+    justify-content: center; /* Center-align items horizontally */
+    border-radius: 10px; /* Rounded corners */
+}

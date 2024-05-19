@@ -1,0 +1,575 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body-text {
+    display: flex;
+    font-family: Raleway, sans-serif;
+    align-items: center;
+    justify-content: center;
+    margin-top: 250px;
+}
+
+body {
+    font-family: Raleway, sans-serif;
+    background-image: url('../img/lll.jpg');
+    background-size: cover; /* This property ensures that the background image covers the entire body */
+    background-repeat: no-repeat; /* This property prevents the background image from repeating */
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 7vh;
+    background-color: rgba(1, 5, 1, 0.92);
+    font-family: Raleway, sans-serif;
+    padding:0 20px; /* Add padding to the nav for better spacing */
+    z-index: 1000; /* Ensure the navigation bar is above other content */
+}
+
+
+.navbar-header {
+    padding-left: 50px; /* Adjust the amount of space from the left side */
+    padding-top: 15px;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    list-style: none; /* Move list-style property here */
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin-left: 10px;
+    list-style: none; /* Remove list-style from individual li elements */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 14px 16px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover:not(.active) {
+    color: white;
+    text-shadow: 0 0 10px white;
+    cursor: pointer;
+}
+
+.nav-links .active {
+    background-color: rgba(47, 79, 79, 0.7);
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+
+.navbar-buttons {
+    display: flex;
+    align-items: center; /* Align buttons vertically center */
+    margin-right: 20px;
+    margin-left: auto; /* Move buttons to the right */
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: auto;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.login-btn:hover {
+    color: white;
+    text-shadow: 0 0 10px white;
+    cursor: pointer;
+}
+
+#signUpBtn{
+    padding: 8px 15px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 20px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#signUpBtn a {
+    font-family: Raleway, sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+
+
+#signUpBtn:hover {
+    color: white;
+    text-shadow: 0 0 20px white;
+    cursor: pointer;
+} /* Change background color on hover */
+
+/* CSS for the cart button */
+.navbar-buttons .cart-btn {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+}
+
+.navbar-buttons .cart-btn:hover {
+    color: white;
+    text-shadow: 0 0 10px white;
+    cursor: pointer;
+}
+
+
+/*-----------------------------------------------------------------------------*/
+
+
+.menu-toggle {
+    display: none;
+}
+
+/* Media query for small screens */
+/* Media query for small screens */
+@media screen and (max-width: 1150px) {
+    .nav-links {
+        display: none; /* Hide the nav links by default */
+        flex-direction: column; /* Arrange links vertically */
+        position: absolute;
+        top: 8vh; /* Adjust top position to align with navbar */
+        left: 0;
+        background-color:rgba(1, 5, 1, 0.9);
+        width: 100%;
+        padding: 20px;
+        z-index: 100; /* Ensure the menu is on top of other content */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow for dropdown effect */
+        box-sizing: border-box;
+    }
+
+    .nav-links.active {
+        display: flex; /* Display nav links when active */
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: flow;
+        background-color: transparent;
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        position: fixed;
+        top: 7px; /* Adjust top position to align with navbar */
+        right: 15px;
+        margin-right: 1px;
+        z-index: 101; /* Ensure the toggle button is above the dropdown menu */
+    }
+
+    .menu-toggle:hover {
+        color: white;
+        text-shadow: 0 0 10px white;
+        cursor: pointer;
+    }
+
+    .menu-toggle:focus {
+        outline: none; /* Remove outline on focus */
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 14px 16px;
+        display: block; /* Make each link a block element */
+        transition: background-color 0.3s ease; /* Add transition effect */
+    }
+
+    .nav-links a:hover:not(.active) {
+        background-color: rgba(211, 211, 211, 0.9); /* Change background color on hover */
+        color: black;
+        border-radius: 5px;
+    }
+
+
+    .nav-links .active a {
+        padding: 14px 16px;
+        background-color: rgba(47, 79, 79, 0.5); /* Highlight active link across the full row */
+    }
+
+    #signUpBtn{
+        margin-right: 15px;
+    }
+
+    #userPoints {
+        padding: 1px 5px; /* Fallback padding for smaller screens */
+    }
+
+    .navbar-buttons {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .logo {
+        margin-right: auto; /* Move the logo to the far left */
+    }
+
+    .login-btn,
+    #signUpBtn,
+    .cart-btn {
+        margin-left: 6px; /* Add space between each button */
+    }
+}
+
+
+/*----------------------------------------------------------------------------------------------------------*/
+
+.container{
+    width: 75%;
+    margin: 85px auto;
+}
+
+.contact-box{
+    background: white;
+    display: flex;
+    border-radius: 10px;
+}
+
+.contact-left{
+    flex-basis: 150%;
+    padding: 40px 60px;
+}
+
+.contact-right{
+    flex-basis: 20%;
+    padding: 40px;
+    background: black;
+    color: white;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#section2 h1{
+    margin-bottom: 10px;
+    color: white;
+}
+
+.input-raw{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-raw .input-group{
+    flex-basis: 45%;
+}
+
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 5px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset ;
+    background-color: transparent;
+}
+
+textarea{
+    font-family: Raleway, sans-serif;
+    resize: none;
+    width: 100%;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+label{
+    margin-bottom: 6px;
+    display: block;
+    color: black;;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 35px;
+    width: 100%;
+    font-size: 11px;
+    font-family: Raleway, sans-serif;
+    margin-bottom: 7px;
+}
+
+/* Style for the options */
+option {
+    font-size: 14px;
+    font-family: Raleway, sans-serif;
+}
+
+form button{
+    background: #222;
+    color: white;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    width: 100%;
+    max-width: 100px;
+    height: 35px;
+    border: 0;
+    padding: 5px;
+    margin-top: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+}
+
+form button:hover {
+    background-color: black;
+    color: white;
+}
+
+.contact-left h3{
+    color: black;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+tr td:first-child{
+    padding-right: 20px;
+}
+
+tr td{
+    padding-top: 20px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 980px) {
+    .contact-box {
+        flex-direction: column;
+    }
+
+    .contact-right {
+        flex-basis: 100%;
+        border-radius: 0;
+        margin-top: 20px;
+    }
+
+    form button {
+        max-width: 30%; /* Change the maximum width for smaller screens */
+    }
+}
+
+/*------popup content-------------------------------------------------------------------------------------*/
+
+/* Styles for the popup container */
+#popupContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 9999;
+    display: none; /* Initially hide the popup */
+}
+
+/* Styles for the popup content */
+.popup-content {
+    color: white;
+    font-family: Raleway, sans-serif;
+}
+
+.popup-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.popup-content p {
+    margin-bottom: 5px;
+}
+
+/* Close button styles */
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    background-color: white; /* Blue background */
+    border: none; /* Remove borders */
+    padding: 2px 6px; /* Some padding */
+}
+
+
+
+
+/*-----------Footer---------------------------------------------------------------------------------------------------*/
+
+.thank-you h3 {
+    padding-top: 40px;
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    font-size: 1em;
+    animation: animateText 3s linear infinite;
+}
+
+/* Animation for "Thank You" text */
+@keyframes animateText {
+    0% {
+        color: black;
+    }
+    25% {
+        color: dimgray;
+    }
+    50% {
+        color: rgba(47, 79, 79, 0.8);
+    }
+    75% {
+        color: darkgray ;
+    }
+    100% {
+        color: white;
+    }
+}
+
+footer{
+    margin-top: 10%;
+    background-color: black;
+    padding:.25em 1em;
+}
+
+.additional-links ul {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.additional-links ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.additional-links ul li a {
+    font-family: Raleway, sans-serif;
+    padding: 12px;
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.additional-links ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#copyright{
+    /* margin-left:20px; */
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+
+.social-menu ul{
+    display: flex;
+    padding:20px;
+}
+
+.social-menu ul li{
+    list-style: none;
+    display:inline-block;
+    margin: 0 15px;
+}
+
+.social-menu ul li .fab{
+    font-size: 25px;
+    line-height: 40px;
+    transition: .3s;
+    color: #000;
+}
+
+.social-menu ul li .fab:hover{
+    color: #fff;
+}
+
+.social-menu ul li a{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    transition: .6s;
+    box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.social-menu ul li a:hover{
+    transform: translate(0, -10%);
+}
+
+.social-menu ul li:nth-child(1) a:hover{
+    background-color: #4267B2;
+}
+.social-menu ul li:nth-child(2) a:hover{
+    background-color: #E4405F;
+}
+.social-menu ul li:nth-child(3) a:hover{
+    background-color: #00ACEE;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+.social-icons li {
+    margin: 0 10px;
+}
+
+
+.box{
+    background: rgba(1, 5, 1, 0.92);
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+
+

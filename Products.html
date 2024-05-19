@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- Meta tags for character set and viewport -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Linking Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,133;1,133&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
+        <!-- Custom CSS file -->
+        <link rel="stylesheet" href="styles/Products.css">
+
+        <link rel="icon"  type="image/png"  href="img/Blogo.jpg">
+
+        
+
+        <!-- Font Awesome for icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+
+        <title>Products</title>
+
+    </head>
+
+
+    <body>
+
+
+        <!-- Section 1: Navigation -->
+        <section id="section1">
+            <div class="section-content">
+
+                <!-- Navbar content -->
+                <nav>
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <img src="img/logoImage.jpg" alt="..." height="36">
+                        </a>
+                        <button class="menu-toggle">&#9776;</button>
+                    </div>
+
+
+                    <ul class="nav-links">
+                        <li><a href="main.html" >Home</a></li>
+                        <li><a href="Products.html" class="active">Products</a></li>
+                        <li><a href="GalleryPage.html">Gallery</a></li>
+                        <li><a href="Quiz.html">Quiz</a></li>
+                        <li><a href="review.html">Review</a> </li>
+                        <li><a href="Support.html">Support</a></li>
+                        <li><a href="AboutUs.html">About</a></li>
+                    </ul>
+                    
+                    <div class="navbar-buttons">
+                        <button class="login-btn"><i class="fas fa-user"></i></button>
+                        <button id="signUpBtn"><a href="SignUpPage.html">Sign Up</a></button>
+                        <button class="cart_button"><i class="fas fa-shopping-cart"></i></button>
+
+
+                        <!-- Cart section -->
+                        <div class="cart">
+
+                            <h2 class="cart_title">Your cart</h2>
+                
+                                <div class="cart_content"></div>
+                                <br>
+                                <hr>
+                
+                                <div class="total">
+                                    <div class="total_title">Total : </div>
+                                    <div class="total_price">0</div>               
+                                </div>
+                
+                                <!-- Toggle 1 popup after clicking 'Buy Now' button -->
+                                <button type="button" class="button_buy" onclick="toggle()">Buy Now</button>  
+                                <button type="button" class="cart_close">Close</button>
+                
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </section>
+
+
+
+        <!-- Blur area after popup toggles -->
+        <div id="blur">
+
+            <!-- First area with a heading -->
+            <div  class="firstArea" >
+                <h1>Browse All Beauty Products</h1>
+            </div>
+
+             <!-- Second area with product listings -->
+            <div class="secondArea" >
+
+
+                    <!-- Product 1 -->
+                    <div class="wrapper" data-name="p_1">                      
+                            <img src="img/productImage1.jpg" alt="image1" class="product_img">
+                            <h2 class="product_titel">Light blue makeup set</h2>
+                            <p class="price">Rs.12400.00</p>
+                            <button class="product_button_1" type="button">Add to cart</button>                       
+                    </div>
+
+
+                    <!-- Product 2--> 
+                    <div class="wrapper" >
+                        <img src="img/productImage2.jpg" alt="image2" class="product_img">
+                        <h2 class="product_titel">Blue Eau De Perfume </h2>
+                        <p class="price">Rs.20500.00</p>
+                        <button class="product_button_1" type="button">Add to cart</button>
+                    </div>
+
+
+                    <!-- Product 3 -->
+                    <div class="wrapper" >
+                        <img src="img/productImage3.jpg" alt="image3" class="product_img">
+                        <h2 class="product_titel">Light blue body cream</h2>
+                        <p class="price">Rs.13500.00</p>
+                        <button class="product_button_1" type="button">Add to cart</button>
+                    </div>
+
+
+                    <!-- Product 4 -->
+                    <div class="wrapper" >
+                        <img src="img/productImage4.jpg" alt="image4" class="product_img">
+                        <h2 class="product_titel">White lotus body cream</h2>
+                        <p class="price">Rs.8500.00</p>
+                        <button class="product_button_1" type="button">Add to cart</button>         
+                    </div>
+
+
+                    <!-- Product 5 -->
+                    <div class="wrapper" >
+                        <img src="img/productImage5.jpg" alt="image5" class="product_img">
+                        <h2 class="product_titel">White makeup set</h2>
+                        <p class="price">Rs.6500.00</p>
+                        <button class="product_button_1" type="button">Add to cart</button>
+                    </div>
+
+
+                    <!-- Product 6 -->
+                    <div class="wrapper" >
+                        <img src="img/productImage6.jpg" alt="image6" class="product_img">
+                        <h2 class="product_titel">Blue body cream</h2>
+                        <p class="price">Rs.5000.00</p>
+                        <button class="product_button_1" type="button">Add to cart</button>
+                    </div>
+
+
+                    <!-- Product 7 -->
+                    <div class="wrapper" >
+                        <img src="img/productImage7.jpg" alt="image7" class="product_img">
+                        <h2 class="product_titel">Light blue lipstick</h2>
+                        <p class="price">Rs.4000.00</p>
+                        <button class="product_button_1" type="button">Add to cart</button>
+                    </div>
+
+
+
+                    <!-- Product 8 -->
+                    <div class="wrapper" >
+                        <img src="img/productImage8.jpg" alt="image8" class="product_img">
+                        <h2 class="product_titel">Blue makeup brush</h2>
+                        <p class="price">Rs.11500.00</p>
+                        <button class="product_button_1" type="button">Add to cart</button>
+                    </div>
+
+
+                    <!-- Product 9 -->
+                    <div class="wrapper" >
+                        <img src="img/productImage9.jpg" alt="image9" class="product_img">
+                        <h2 class="product_titel">Gold Eau De Perfume</h2>
+                        <p class="price">Rs.12500.00</p>
+                        <button class="product_button_1" type="button">Add to cart</button>
+                    </div>
+
+
+                    <!-- Product 10 -->
+                    <div class="wrapper" >
+                        <img src="img/productImage10.jpg" alt="image10" class="product_img">
+                        <h2 class="product_titel">Dark blue lipstick</h2>
+                        <p class="price">Rs.11500.00</p>
+                        <button class="product_button_1" type="button">Add to cart</button>
+                    </div>
+
+
+                    <!-- Product 11 -->
+                    <div class="wrapper" >
+                        <img src="img/productImage11.jpg" alt="image11" class="product_img">
+                        <h2 class="product_titel">Full makeup set</h2>
+                        <p class="price">Rs.8000.00</p>
+                        <button class="product_button_1" type="button">Add to cart</button>
+                    </div>
+
+
+                    <!-- Product 12 -->
+                    <div class="wrapper" >
+                        <img src="img/productImage12.jpg" alt="image12" class="product_img">
+                        <h2 class="product_titel">Dark black lipstick</h2>
+                        <p class="price">Rs.9500.00</p>
+                        <button class="product_button_1" type="button">Add to cart</button>
+                    </div>
+
+
+                    <!-- Product 13 -->
+                    <div class="wrapper" >
+                        <img src="img/productImage13.jpg" alt="image13" class="product_img">
+                        <h2 class="product_titel">Dark purple makeup</h2>
+                        <p class="price">Rs.14750.00</p>
+                        <button class="product_button_1" type="button">Add to cart</button>
+                    </div>
+
+
+                    <!-- Product 14 -->
+                    <div class="wrapper" >
+                        <img src="img/productImage14.jpg" alt="image14" class="product_img">
+                        <h2 class="product_titel">Dark pink lipstick</h2>
+                        <p class="price">Rs.5500.00</p>
+                        <button class="product_button_1" type="button">Add to cart</button>
+                    </div>
+
+
+                    <!-- Product 15 -->
+                    <div class="wrapper" >
+                        <img src="img/productImage15.jpg" alt="image15" class="product_img">
+                        <h2 class="product_titel">Red rose lipstick</h2>
+                        <p class="price">Rs.9750.00</p>
+                        <button class="product_button_1" type="button">Add to cart</button>
+                    </div>
+
+
+                    <!-- Product 16 -->
+                    <div class="wrapper" >
+                        <img src="img/productImage16.jpg" alt="image16" class="product_img">
+                        <h2 class="product_titel">Golden yellow lipstick</h2>
+                        <p class="price">Rs.3750.00</p>
+                        <button class="product_button_1" type="button">Add to cart</button>
+                    </div>
+            </div>
+
+
+
+            <!-- Footer Section -->
+            <footer>
+
+                <!-- Social media icons -->
+                <div class="social-menu">
+                    <ul class="social-icons">
+                        <li><a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                    
+                </div>
+
+                <!-- Footer logo -->
+                <div class="box">
+                    <div class="footerLogo">
+                        <img src="img/logoImage.jpg" alt="..." height="50">
+                    </div>
+                </div>
+
+                
+                <div class="additional-links">
+                    <ul>
+                        <li><a href="Support.html">Contact us</a></li>
+                        <li><a href="AboutUs.html">About us</a></li>
+                        <li><a href="editor3.html">Editors page</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="thank-you">
+                    <h3>Thank You! for visiting our website</h3>
+                </div>
+
+
+                <div id="copyright">copyright &#169; 2024, Beauty.com</div>
+
+                
+            </footer>
+
+        </div>    
+
+
+
+        <!-- Toggle 1  -->
+        <div class="popup">
+
+            <h1>Contact Details</h1>
+
+            
+            <p class="p1">Contact</p>
+
+
+            <input type="text" placeholder="First name" class="Name">
+            <input type="text" placeholder="Last name" class="Name"><br>
+            <input type="text" placeholder="Email" class="email">
+            <input type="text" placeholder="Phone" class="phone">
+
+            <p class="p2">Address</p>
+            
+            <input type="text" placeholder="Address" class="address"><br>
+            <input type="text" placeholder="City" class="cityWithZip">          
+            <input type="text" placeholder="Zip-Code" class="cityWithZip">
+
+            <!-- Toggle 1  button  container-->
+            <div class="toggle1Buttons">
+                <!-- Toggle 2 popup after clicking 'Confirm details' button -->
+                <button type="button" class="detail_comform_button" onclick=" toggle2()"  >Confirm details</button>
+                <button type="button" class="detail_list_close_button" onclick="closeAllPopups()">Close</button>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Toggle 2  -->
+        <div class="popup2">
+
+
+            <h1>Order Summary</h1>
+
+            <!-- Product Details Section -->
+            <div class="product_details">
+                <br>
+                <br>
+
+                <!-- Ordered Details Section -->
+                <div class="ordered_details"></div> 
+                <br>
+                <br>
+
+                <!-- Discount Print Section -->
+                <div class="discount_print"></div>
+
+                <!-- Total Price with Discount Section -->
+                <div class="total_price_with_discount"></div>  
+            </div>
+
+             <!-- Toggle 3 popup after clicking 'Confirm order' button -->
+            <button type="button" class="success_order_button" onclick="toggle3()">Confirm order</button>
+            <button type="button" class="order_details_close_button" onclick="closeAllPopups()" >Close</button>
+
+        </div>
+
+
+
+        <!-- Toggle 2  -->
+        <div class="popup3">
+
+            
+            <h1>Thank you for order.</h1>
+            <h1>Your order is successful!</h1>
+            <button type="button" class="success_close_button" onclick="closeAllPopups()" >Close</button>
+            
+        </div>
+
+
+
+         <!-- Custom Java Script file -->
+         <script src="scripts/Products.js"></script>
+
+          <!-- Custom Java Script file -->
+          <script src="scripts/quizScript.js"></script>
+        
+        
+
+       
+
+    </body>
+
+
+</html>

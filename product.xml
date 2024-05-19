@@ -1,0 +1,178 @@
+<data>
+    <product>
+        <name>Dark Purple Makeup</name>
+        <description>A luxurious palette for a regal look.</description>
+        <reviews>
+            <review>
+                <user>Mano </user>
+                <rating>4.5</rating>
+                <comment>This product is great!</comment>
+            </review>
+        </reviews>
+    </product>
+    <product>
+        <name>Dark Pink Lipstick</name>x
+        <description>A vibrant shade for an impactful pout.</description>
+        <reviews>
+            <review>
+                <user>Hindika</user>
+                <rating>5</rating>
+                <comment>Lasts all day without needing a retouch. Love the matte finish!</comment>
+            </review>
+        </reviews>
+    </product>
+    <product>
+        <name>Red Rose Lipstick</name>
+        <description></description>
+        <reviews>
+            <review>
+                <user>Chris</user>
+                <rating>3</rating>
+                <comment>It’s the perfect shade of red for me, not too bright and not too dark.</comment>
+            </review>
+        </reviews>
+    </product>
+      <product>
+        <name>Golden Yellow Lipstick</name>
+        <description></description>
+        <reviews>
+            <review>
+                <user>Mogan</user>
+                <rating>3.5</rating>
+                <comment>Such a unique color! It’s surprisingly wearable and always gets compliments.</comment>
+            </review>
+        </reviews>
+    </product>
+    <product>
+        <name>Gold Eau De Perfume</name>
+        <description></description>
+        <reviews>
+            <review>
+                <user>Jamie </user>
+                <rating>3</rating>
+                <comment>The scent is intoxicating, and it has become my signature perfume.</comment>
+            </review>
+        </reviews>
+    </product>
+    <product>
+        <name>Dark Blue Lipstick</name>
+        <description></description>
+        <reviews>
+            <review>
+                <user>Samira  </user>
+                <rating>2</rating>
+                <comment>I was looking for something different, and this shade is a showstopper.</comment>
+            </review>
+        </reviews>
+    </product>
+    <product>
+        <name>Full Makeup Set</name>
+        <description></description>
+        <reviews>
+            <review>
+                <user>Sambavi</user>
+                <rating>4</rating>
+                <comment>This set includes everything for a beginner like me. It’s also great for travel!</comment>
+            </review>
+        </reviews>
+    </product>
+    <product>
+        <name>Dark Black Lipstick</name>
+        <description></description>
+        <reviews>
+            <review>
+                <user>Jordan</user>
+                <rating>2</rating>
+                <comment>I’m obsessed with this lipstick! It’s the deepest black I’ve found.</comment>
+            </review>
+        </reviews>
+    </product>
+    <product>
+        <name>White Makeup Set</name>
+        <description></description>
+        <reviews>
+            <review>
+                <user>Kumari</user>
+                <rating>5</rating>
+                <comment>The pigments are so rich and easy to work with. Great for creating highlights!</comment>
+            </review>
+        </reviews>
+    </product>
+    <product>
+        <name>Blue Body Cream</name>
+        <description></description>
+        <reviews>
+            <review>
+                <user>Dana</user>
+                <rating>4</rating>
+                <comment>My skin feels so smooth, and the scent is very light and pleasant.</comment>
+            </review>
+        </reviews>
+    </product>
+    <product>
+        <name>Light Blue Lipstick</name>
+        <description></description>
+        <reviews>
+            <review>
+                <user>Jorch</user>
+                <rating>3</rating>
+                <comment>A fun color that’s perfect for summer festivals!</comment>
+            </review>
+        </reviews>
+    </product>
+    <product>
+        <name>Blue Makeup Brush</name>
+        <description></description>
+        <reviews>
+            <review>
+                <user>Robin</user>
+                <rating>3</rating>
+                <comment>These brushes are amazing, they don’t shed and apply makeup evenly.</comment>
+            </review>
+        </reviews>
+    </product>
+    <product>
+        <name>Light Blue Makeup Set</name>
+        <description></description>
+        <reviews>
+            <review>
+                <user>Alex</user>
+                <rating>4</rating>
+                <comment>I love the cool tones in this set, they’re perfect for a winter look.</comment>
+            </review>
+        </reviews>
+    </product>
+    <product>
+        <name>Blue Eau De Perfume</name>
+        <description></description>
+        <reviews>
+            <review>
+                <user>Lee</user>
+                <rating>1</rating>
+                <comment>It’s like a fresh breeze in a bottle. So refreshing!</comment>
+            </review>
+        </reviews>
+    </product>
+    <product>
+        <name>Light Blue Body Cream</name>
+        <description></description>
+        <reviews>
+            <review>
+                <user>Drew</user>
+                <rating>1</rating>
+                <comment>It absorbs quickly and keeps my skin moisturized all day.</comment>
+            </review>
+        </reviews>
+    </product>
+    <product>
+        <name>White Lotus Body Cream</name>
+        <description></description>
+        <reviews>
+            <review>
+                <user>Casey </user>
+                <rating>1</rating>
+                <comment>The white lotus scent is subtle and not overpowering. It’s my new favorite.</comment>
+            </review>
+        </reviews>
+    </product>
+</data>

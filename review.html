@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Page</title>
+  <link rel="stylesheet" href="styles/review.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,133;1,133&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<section id="section1">
+    <div class="section-content">
+        <nav>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img src="./images/LOGO.png" alt="..." height="36">
+                </a>
+                <button class="menu-toggle">&#9776;</button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="main.html">Home</a></li>
+                        <li><a href="Products.html">Products</a></li>
+                        <li><a href="GalleryPage.html">Gallery</a></li>
+                        <li><a href="Quiz.html" >Quiz</a></li>
+                        <li><a href="review.html" class="active">Review</a> </li>
+                        <li><a href="Support.html">Support</a></li>
+                        <li><a href="AboutUs.html">About</a></li>
+            </ul>
+            <div class="navbar-buttons">
+                <button class="login-btn"><i class="fas fa-user"></i></button>
+                <button id="signUpBtn"><a href="SignUpPage.html">Sign Up</a></button>
+                <button class="cart-btn"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+        </nav>
+        <div class="search-bar">
+            <select id="productDropdown" class="search-bar">
+                <option value="" selected disabled hidden>Select a product</option>
+            </select>
+            <div class="search-bar-controls">
+                <button onclick="increaseFontSize()">Increase Font Size</button>
+                <button onclick="decreaseFontSize()">Decrease Font Size</button>
+                <button onclick="toggleBackground()">Change Background</button>
+
+              </div>
+        </div>
+        
+    </div>
+</section>
+
+<div class="container">
+    <div class="card">
+        <div id="recommendedProductsSection" class="left-section">
+            <p>Recommended Products</p>
+            <div id="recommendedProducts"></div> <!-- Change ul to div -->
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card1">
+        <div id="productReviewSection">
+            <h1>Product Reviews</h1>
+            <h2>Submit Your Review</h2>       
+                <form id="reviewForm">
+                    <div>
+                        <p>How did we do?</p>
+                        <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label for="name" style="flex: 1;">Name:</label>
+                            <input type="text" id="name" required style="flex: 1;">
+                        </div><br>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label for="email" style="flex: 1;">Email:</label>
+                            <input type="email" id="email" required style="flex: 1;">
+                        </div><br>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <label for="comment" style="flex: 1;">Comment:</label>
+                            <textarea id="comment" rows="4" required style="flex: 1;"></textarea>
+                        </div><br>
+                        <div id="buttonContainer">
+                            <input type="submit" value="Submit Review">
+                            <input type="button" value="Subscribe">
+                        </div>
+                    </div>
+                </form>            
+        </div>
+    </div>
+</div>
+
+
+<div class="slider">
+    <div class="list">
+        <!-- Product items will be dynamically added here -->
+    </div>
+    <div class="thumbnail">
+        <!-- Thumbnails for navigation will be dynamically added here -->
+    </div>
+    
+    <div class="nextPrevArrows">
+        <button class="prev">&lt;</button> <!-- Use HTML entity for less than symbol -->
+        <button class="next">&gt;</button> <!-- Use HTML entity for greater than symbol -->
+    </div>
+</div>
+
+<footer>
+    <div class="social-menu">
+        <ul class="social-icons">
+            <li><a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </div>
+    <div class="box">
+        <div class="footerLogo">
+            <img src="./images/LOGO.png" alt="..." height="50">
+        </div>
+    </div>
+    <div class="additional-links">
+        <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="editor4.html">Editor's page</a></li>
+        </ul>
+    </div>
+    <div class="thank-you">
+        <h3>Thank You! for visiting our website</h3>
+    </div>
+    <div id="copyright">Copyright &copy; 2024, Beauty.com</div>
+</footer>
+
+<script src="scripts/reviewScript.js"></script>
+</body>
+</html>

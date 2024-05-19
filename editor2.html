@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Page Editor</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #cccccc;
+        }
+        header {
+            background-color: black;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+        h2 {
+            margin-bottom: 10px;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .task2 {
+            text-align: left;
+            background-color: black;
+            color: white;
+            max-width: 600px;
+            margin: 5px auto 5px;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        .task1{
+            text-align: left;
+            background-color: gray;
+            color: black;
+            max-width: 600px;
+            margin: 5px auto 5px;
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .task3{
+            text-align: left;
+            background-color: gray;
+            color: black;
+            max-width: 600px;
+            margin: 5px auto 5px;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+
+        /*--------------------------Footer-------------------------------------------------------------*/
+
+        .thank-you h3 {
+            padding-top: 40px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            animation: animateText 3s linear infinite;
+        }
+
+        /* Animation for "Thank You" text */
+        @keyframes animateText {
+            0% {
+                color: black;
+            }
+            25% {
+                color: dimgray;
+            }
+            50% {
+                color: rgba(47, 79, 79, 0.8);
+            }
+            75% {
+                color: darkgray ;
+            }
+            100% {
+                color: white;
+            }
+        }
+
+        footer{
+            margin-top: 10px;
+            background-color: black;
+            padding:.25em 1em;
+        }
+
+        .additional-links ul {
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .additional-links ul li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .additional-links ul li a {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 12px;
+            background-color: transparent;
+            text-decoration: none;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .additional-links ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        #copyright{
+            /* margin-left:20px; */
+            padding-top: 20px;
+            padding-bottom: 10px;
+            font-size: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+        }
+
+        .social-menu ul{
+            display: flex;
+            padding:20px;
+        }
+
+        .social-menu ul li{
+            list-style: none;
+            display:inline-block;
+            margin: 0 15px;
+        }
+
+        .social-menu ul li .fab{
+            font-size: 25px;
+            line-height: 40px;
+            transition: .3s;
+            color: #000;
+        }
+
+        .social-menu ul li .fab:hover{
+            color: #fff;
+        }
+
+        .social-menu ul li a{
+            position: relative;
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            text-align: center;
+            transition: .6s;
+            box-shadow: 0 5px 4px rgba(0,0,0,.5);
+        }
+
+        .social-menu ul li a:hover{
+            transform: translate(0, -10%);
+        }
+
+        .social-menu ul li:nth-child(1) a:hover{
+            background-color: #4267B2;
+        }
+        .social-menu ul li:nth-child(2) a:hover{
+            background-color: #E4405F;
+        }
+        .social-menu ul li:nth-child(3) a:hover{
+            background-color: #00ACEE;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+        }
+        .social-icons li {
+            margin: 0 10px;
+        }
+
+
+        .box{
+            background: black;
+            display: flex;
+            justify-content: center; /* Add this line */
+            border-radius: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="headerLogo">
+        <img src="img/LOGObg.png" alt="..." height="30">
+    </div>
+    <h1>Page Editor</h1>
+    <p>Name: Nelishka Dabare</p>
+    <p>Role: Student 2</p>
+    <p>Student ID: 20231631</p>
+    <p>Email: support@beauty.com</p>
+</header>
+
+<section class="tasks-completed">
+    <h2>Tasks Completed:</h2>
+        <div class="task1">
+        <h4>Create a quiz page</h4>
+        <ul>
+            <li>It has 5 questions where you choose the right answer from 3 options.</li>
+            <li> Each right answer gives you 2 points, but a wrong answer takes away 1 point.</li>
+            <li> After finishing, you see your score and can claim points for your next buy. </li>
+            <li>Then you can easily shop by clicking "Shop Now."</li>
+        </ul>
+        </div>
+        <br>
+        <div class="task2">
+            <h4>Create a query form</h4>
+            <ul>
+                <li>Added a query form to the website, featuring clearly labeled HTML form elements styled with CSS.</li>
+                <li>Included input fields for user details (name, email address), a text area for query details, and options to choose the theme of the query using a select dropdown.</li>
+                <li>Implemented a reset button to clear form fields and a submit button with JavaScript validation to ensure compulsory fields ('name', 'email', 'query theme') are filled before submission. </li>
+                <li>Additionally, incorporated a "Reach Us" section with contact information including email, phone, and address for beauty.com.</li>
+            </ul>
+        </div>
+    <br>
+    <div class="task3">
+        <h4>Designed the navigation bar</h4>
+        <ul>
+            <li>Designed the navigation bar of the website to provide easy access to various sections using CSS-styled links resembling buttons with hover effects.</li>
+            <li>This allows users to navigate through the website's different parts.</li>
+            <li>Implemented CSS to ensure the navigation bar adjusts to different screen sizes.</li>
+        </ul>
+    </div>
+</section>
+
+
+<footer>
+    <div class="social-menu">
+        <ul class="social-icons">
+            <li><a href="https://web.facebook.com/?_rdc=1&_rdr" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </div>
+    <div class="box">
+        <div class="footerLogo">
+            <img src="img/LOGObg.png" alt="..." height="50">
+        </div>
+    </div>
+    <div class="additional-links">
+        <ul>
+            <li><a href="Support.html">Contact us</a></li>
+            <li><a href="AboutUs.html">About us</a></li>
+            <li><a href="editor2.html">Editors page</a></li>
+        </ul>
+    </div>
+    <div class="thank-you">
+        <h3>Thank You! for visiting our website</h3>
+    </div>
+    <div id="copyright">copyright &#169 2024, Beauty.com</div>
+</footer>
+
+
+</body>
+</html>

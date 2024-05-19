@@ -1,0 +1,2047 @@
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* Navigation bar Styling */
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 7vh;
+    background-color: rgba(1, 5, 1, 0.92);
+    font-family: Raleway, sans-serif;
+    padding:0 20px; /* Add padding to the nav for better spacing */
+    z-index: 1000; /* Ensure the navigation bar is above other content */
+}
+
+
+.navbar-header {
+    padding-left: 50px; /* Adjust the amount of space from the left side */
+    padding-top: 15px;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    list-style: none; /* Move list-style property here */
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin-left: 10px;
+    list-style: none; /* Remove list-style from individual li elements */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 14px 16px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-links a:hover:not(.active) {
+    color: white;
+    text-shadow: 0 0 10px white;
+    cursor: pointer;
+}
+
+.nav-links .active {
+    background-color: rgba(47, 79, 79, 0.7);
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+
+.navbar-buttons {
+    display: flex;
+    align-items: center; /* Align buttons vertically center */
+    margin-right: 20px;
+    margin-left: auto; /* Move buttons to the right */
+}
+
+.login-btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: auto;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.login-btn:hover {
+    color: white;
+    text-shadow: 0 0 10px white;
+    cursor: pointer;
+}
+
+#signUpBtn{
+    padding: 8px 15px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 5px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#signUpBtn a {
+    font-family: Raleway, sans-serif;
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+
+
+#signUpBtn:hover {
+    color: white;
+    text-shadow: 0 0 20px white;
+    cursor: pointer;
+} /* Change background color on hover */
+
+/* CSS for the cart button */
+.navbar-buttons .cart_button {
+    background-color: black; /* Example background color */
+    color: #fff; /* Example text color */
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 5px;
+}
+
+.navbar-buttons .cart_button:hover {
+    color: white;
+    text-shadow: 0 0 10px white;
+    cursor: pointer;
+}
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+
+.menu-toggle{
+    display: none;
+}
+
+
+/* Media query for small screens */
+/* Media query for small screens */
+@media screen and (max-width: 1150px) {
+    .nav-links {
+        display: none; /* Hide the nav links by default */
+        flex-direction: column; /* Arrange links vertically */
+        position: absolute;
+        top: 8vh; /* Adjust top position to align with navbar */
+        left: 0;
+        background-color:rgba(1, 5, 1, 0.9);
+        width: 100%;
+        padding: 20px;
+        z-index: 100; /* Ensure the menu is on top of other content */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow for dropdown effect */
+        box-sizing: border-box;
+    }
+
+    .nav-links.active {
+        display: flex; /* Display nav links when active */
+    }
+
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+        display: flow;
+        background-color: transparent;
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        position: fixed;
+        top: 7px; /* Adjust top position to align with navbar */
+        right: 15px;
+        margin-right: 1px;
+        z-index: 101; /* Ensure the toggle button is above the dropdown menu */
+    }
+
+    .menu-toggle:hover {
+        color: white;
+        text-shadow: 0 0 10px white;
+        cursor: pointer;
+    }
+
+    .menu-toggle:focus {
+        outline: none; /* Remove outline on focus */
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 14px 16px;
+        display: block; /* Make each link a block element */
+        transition: background-color 0.3s ease; /* Add transition effect */
+    }
+
+    .nav-links a:hover:not(.active) {
+        background-color: rgba(211, 211, 211, 0.9); /* Change background color on hover */
+        color: black;
+        border-radius: 5px;
+    }
+
+
+    .nav-links .active a {
+        padding: 14px 16px;
+        background-color: rgba(47, 79, 79, 0.5); /* Highlight active link across the full row */
+    }
+
+    #signUpBtn{
+        margin-right: 15px;
+    }
+
+    #userPoints {
+        padding: 1px 5px; /* Fallback padding for smaller screens */
+    }
+
+    .navbar-buttons {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .logo {
+        margin-right: auto; /* Move the logo to the far left */
+    }
+
+    .login-btn,
+    #signUpBtn,
+    .cart_button {
+        margin-left: 6px; /* Add space between each button */
+    }
+}
+
+
+
+
+/* Define background for the entire page */
+body{
+    background-color: rgb(147, 147, 147);
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* First Area Styling */
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* Styling for firstArea */
+.firstArea{
+    height: 300px;
+    background-image: linear-gradient(to bottom, rgb(48, 48, 48), rgb(147, 147, 147));
+}
+
+
+
+/* Styling for firstArea's heading */
+.firstArea h1{
+    position: relative;
+    font-size: 55px;
+    font-family: "Josefin Slab", serif;
+    top: 50%;
+    left: 7%;
+    width: 80%;
+    color: rgb(0, 0, 0);
+}
+
+
+
+/* Styling for secondArea */
+.secondArea{
+    width: 100%;
+    height: 3200px;
+    background-color: rgb(147, 147, 147);
+    position: relative;  
+}
+
+
+
+/* Wrapper styling */
+.wrapper{
+    position: relative;   
+    left: 5%;
+    float: left;
+    width: 20%;
+    height: 730px;
+    padding: 1px;
+    margin: 1.2%;
+    background-color: rgb(238, 236, 236);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); 
+    transition: box-shadow 0.4s ease, transform 0.4s ease;    
+}
+
+
+/* Wrapper hover effect styling */
+.wrapper:hover {
+    box-shadow: 0px 0px 10px rgba(32, 32, 32, 0.9); /* Box-shadow on hover */
+    transform: scale(1.01); /* Scale up on hover */
+}
+
+
+/* Wrapper image styling */
+.wrapper img{
+    width: 100%;
+    height: 500px; 
+}
+
+
+/* Wrapper heading styling */
+.wrapper  h2{
+    font-size: 25px; 
+    padding: 10px;
+    font-weight: 400;   
+    font-family: "Raleway", sans-serif;
+}
+
+
+/* Wrapper paragraph styling */
+.wrapper  p{
+    font-size: 20px; 
+    padding: 10px;
+    font-weight: 400;   
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+   
+}
+
+
+
+/* Wrapper1 button styling */
+.wrapper  button{
+    background-color: #ffffff; /* Green */    
+    border: none;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;  
+    font-size: 16px;
+    margin: 40px 0px;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px rgb(0, 0, 0); 
+    transition: background-color 0.5s ease;
+    
+}
+
+
+
+/* Wrapper1 button hover effect */
+.wrapper button:hover {
+    background-color: #e1dede;
+    transform: scale(1.01); /* Scale up on hover */ 
+}
+
+
+
+
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 1400px) {
+
+    
+    .firstArea h1{      
+        left: 6%;      
+    }
+
+    .wrapper{       
+        left: 4.5%;      
+        width: 28%;
+        height: 730px;
+                    
+    }
+
+    .secondArea{      
+        height: 4600px;
+          
+    }
+
+}
+
+
+@media only screen and (max-width: 1200px) {
+ 
+    .firstArea h1{      
+        font-size: 50px;        
+    }  
+
+}
+
+
+@media only screen and (max-width: 1050px) {
+   
+    .firstArea h1{      
+        left: 8.5%;      
+    }
+
+
+    .wrapper{
+        
+        left: 7.2%;      
+        width: 40%;
+        height: 730px;       
+    }
+
+
+    .secondArea{
+        
+        height: 6100px;       
+    }
+    
+
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+  
+    .firstArea h1{  
+        width: 90%;    
+        font-size: 45px;        
+    }
+
+}
+
+
+
+@media only screen and (max-width: 760px) {
+
+    .firstArea h1{      
+        
+        left: 8%;      
+    }
+
+
+    .wrapper{       
+        left: 18%;      
+        width: 60%;
+        height: 730px;
+               
+    }
+
+    .secondArea{     
+        height: 12000px;
+              
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    
+    .firstArea h1{  
+        
+        font-size: 40px;        
+    }
+    
+}
+
+
+
+@media only screen and (max-width: 560px) {
+    
+    .firstArea h1{  
+        width: 70%;    
+        left: 8%;  
+
+    }
+
+
+
+    .wrapper{        
+        left: 10%;      
+        width: 80%;
+        height: 730px;      
+        
+    }
+
+}
+
+
+
+@media only screen and (max-width: 400px) {
+ 
+    .firstArea h1{  
+        left: 4%;
+        width: 90%;    
+        font-size: 30px;        
+    } 
+
+}
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* Cart Styling */
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/* Styles for the cart container */
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 500px;
+    height: 100%;
+    padding: 20px;
+    background-color: rgb(192, 192, 192);
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+
+
+/* Styles for the active state of the cart */
+.cart.active{
+    right: 0;     /* Move the cart into view */
+    transition: 0.3s cubic-bezier(0.075,0.82,0.165,1);
+}
+
+
+/* Styles for the cart title */
+.cart_title{
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+
+/* Styles for the cart item box */
+.cart_box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+
+/* Styles for the cart item image */
+.cart_img{
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    object-position: center;
+    padding: 5px;
+}
+
+
+/* Custom style for cart item image */
+.cart_img_custom {
+    width: 150px;
+    height: 150px;
+}
+
+
+/* Styles for the detail box within the cart item */
+.detail_box{
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+
+/* Styles for the cart product title */
+.cart_product_title{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+}
+
+/* Styles for the cart price */
+.cart_price{
+    font-weight: 450;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Styles for the cart quantity input */
+.cart_quantity{
+    border: 1px solid var(--text-color);  
+    width: 50px;
+    text-align: center;
+    left: -1%;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+
+
+/* Styles for the remove button */
+.remove {
+    background-color: #ffffff; 
+    border: none;
+    width: 70px;
+    height: 25px; 
+    font-family: "Raleway", sans-serif;
+    position: relative;
+    left: -50%;
+    top: 18%;
+    color: rgb(0, 0, 0);
+    padding: 0 10px;
+    text-align: center;  
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px rgb(0, 0, 0); 
+    transition: background-color 0.5s ease;
+    
+}
+
+
+
+/* Styles for the total title */
+.total_title {
+    font-family: "Raleway", sans-serif;
+    font-size: 30px;
+    padding: 10px 10px;
+}
+
+
+/* Styles for the total price */
+.total_price{
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+    padding: 0 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Styles for the buy now button */
+.button_buy{
+    background-color: #ededed;   
+    border: none;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;  
+    font-size: 16px;
+    margin: 20px 0px;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px rgb(0, 0, 0); 
+    transition: background-color 0.5s ease;
+}
+
+
+
+/* Styles for the close button */
+.cart_close{
+    background-color: #ededed; 
+    border: none;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;  
+    font-size: 16px;
+    margin: 10px 0px;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px rgb(0, 0, 0); 
+    transition: background-color 0.5s ease;
+    
+}
+
+
+/* Hover styles for button */
+
+.button_buy:hover {
+    background-color: #e1dede;
+    transform: scale(1.01); /* Scale up on hover */ 
+}
+
+.cart_close:hover {
+    background-color: #e1dede;
+    transform: scale(1.01); 
+}
+
+.remove:hover {
+    background-color: #e1dede;
+    transform: scale(1.01); 
+}
+
+
+
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 500px) {
+
+    .cart {       
+        width: 400px;       
+    }
+
+    .cart_product_title{
+        position: relative;
+        left: 20%;
+    }
+    
+    .cart_price{
+        position: relative;
+        left: 20%;
+    }
+    
+    .cart_quantity{
+        left: 20%;
+    
+    }   
+
+}
+
+
+
+
+@media only screen and (max-width: 400px) {
+   
+    .cart {        
+        width: 350px;       
+    }
+
+    .cart_product_title{
+        position: relative;
+        left: 25%;
+    }
+    
+    .cart_price{
+        position: relative;
+        left: 25%;
+    }
+    
+    .cart_quantity{
+        left: 25%;   
+    }
+
+    .cart_img{
+        width: 10px;
+        height: 10px;        
+    }
+    
+}
+
+
+
+
+/* Styles for the blurred background when popup toggles */
+#blur.active {
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/*Toggle 1 popup styling */
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* Styles for the popup container */
+.popup {
+    position: fixed;
+    top: 14%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(229, 229, 229);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6); 
+    border-radius: 20px;  
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+/* Styles for the active state of the popup */
+.popup.active {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    top: 14%;
+}
+
+
+/* Styles for the popup title */
+.popup h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+    padding: 20px 0;
+    font-family: "Raleway", sans-serif;
+}
+
+
+/* Styles for paragraph 1 and paragraph 2 */
+.p1{
+    position: relative;
+    left: 17%;
+    top: 3%;
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+}
+.p2{
+    position: relative;
+    left: 17%;
+    top: 11%;
+    font-size: 20px;
+    font-family: "Raleway", sans-serif;
+}
+
+
+/* Styles for input fields */
+
+
+input {
+    border-radius: 5px;
+    position: relative;
+    left: 20%; 
+    border: 1px solid #ccc;
+    padding: 8px; 
+    
+}
+
+
+.Name{
+    border-radius: 5px;
+    position: relative;
+    left: 15.8%; 
+    width: 30.5%;
+    top: 4%;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 15px 8px; 
+
+}
+
+.email{
+    border-radius: 5px;
+    position: relative;
+    left: 16.5%; 
+    width: 63%;
+    border: 1px solid #ccc;
+    top: 4.1%;
+    padding: 15px 8px; 
+}
+.phone{
+    border-radius: 5px;
+    position: relative;
+    left: 16.5%; 
+    width: 63%;
+    border: 1px solid #ccc;
+    top: 6%;
+    padding: 15px 8px; 
+}
+
+.address{
+    border-radius: 5px;
+    position: relative;
+    left: 16.5%; 
+    width: 63%;
+    border: 1px solid #ccc;
+    top: 13.2%;
+    padding: 15px 8px; 
+
+}
+
+.cityWithZip{
+    border-radius: 5px;
+    position: relative;
+    left: 15.8%; 
+    width: 30.5%;
+    top: 13%;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 15px 8px; 
+}
+
+
+/* Styles for the toggle 1 button container*/
+.toggle1Buttons{
+    position: relative;
+    top: 16%;
+    width: 80%;
+}
+
+
+/* Styles for the confirmation button */
+.detail_comform_button,
+.detail_list_close_button{
+    top: 26.5%;
+    background-color: #ffffff; /* Green */    
+    border: none;
+    width: 30%;
+    position: relative;
+    left: 25%;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;  
+    font-size: 16px;
+    margin: 40px 10px;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px rgb(0, 0, 0); 
+    transition: background-color 0.5s ease;
+}
+
+
+/* Styles for the close button */
+.detail_list_close_button{
+    top: 26.5%;
+    background-color: #ffffff; /* Green */    
+    border: none;
+    width: 30%;
+    position: relative;
+    left: 30%;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;  
+    font-size: 16px;
+    margin: 40px 10px;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px rgb(0, 0, 0); 
+    transition: background-color 0.5s ease;
+
+}
+
+/* Hover styles for confirmation button and close button */
+
+.detail_comform_button:hover,
+.detail_list_close_button:hover {
+    background-color: #e1dede;
+    transform: scale(1.01); /* Scale up on hover */
+}
+
+
+
+
+@media only screen and (max-width: 1600px) {
+
+    .popup {      
+        top: 14%;
+        left: 10%;
+        width: 80%;    
+    }
+
+        
+    .popup h1{       
+        font-size: 40px;        
+    }
+
+
+    .p1{        
+        left: 17%;
+        top: 3%;
+        font-size: 20px;       
+    }
+
+
+    .p2{       
+        left: 17%;
+        top: 11%;
+        font-size: 20px;        
+    }
+
+
+    .Name{      
+        left: 15.8%; 
+        width: 30.5%;
+        top: 4%;
+    }
+
+    .email{
+        left: 16.6%; 
+        width: 63.4%;
+        top: 4%; 
+    }
+    .phone{
+        left: 16.6%; 
+        width: 63.4%;
+        top: 5%;
+    }
+
+    .address{
+        left: 16.6%; 
+        width: 63.4%;
+        top: 15%;
+
+    }
+
+    .cityWithZip{
+        left: 15.8%; 
+        width: 30.5%;
+        top: 15%; 
+    }
+
+    
+
+}
+
+
+
+@media only screen and (max-width: 1500px) {
+
+    .popup {      
+        top: 14%;
+        left: 10%;
+        width: 80%;    
+    }
+
+        
+    .popup h1{       
+        font-size: 40px;        
+    }
+
+
+    .p1{        
+        left: 17%;
+        top: 3%;
+        font-size: 20px;       
+    }
+
+
+    .p2{       
+        left: 17%;
+        top: 11%;
+        font-size: 20px;        
+    }
+
+
+    .Name{      
+        left: 15.8%; 
+        width: 30.5%;
+        top: 4.6%;
+    }
+
+    .email{
+        left: 16.6%; 
+        width: 63.4%;
+        top: 4%; 
+    }
+    .phone{
+        left: 16.6%; 
+        width: 63.4%;
+        top: 5%;
+    }
+
+    .address{
+        left: 16.6%; 
+        width: 63.4%;
+        top: 15%;
+
+    }
+
+    .cityWithZip{
+        left: 15.8%; 
+        width: 30.5%;
+        top: 15%; 
+    }
+
+    
+
+}
+
+
+
+
+
+@media only screen and (max-width: 1400px) {
+
+    .popup {      
+        top: 14%;
+        left: 10%;
+        width: 80%;    
+    }
+
+        
+    .popup h1{       
+        font-size: 40px;        
+    }
+
+
+    .p1{        
+        left: 17%;
+        top: 3%;
+        font-size: 20px;       
+    }
+
+
+    .p2{       
+        left: 17%;
+        top: 11%;
+        font-size: 20px;        
+    }
+
+
+    .Name{      
+        left: 15.7%; 
+        width: 30.5%;
+        top: 4.5%;
+    }
+
+    .email{
+        left: 16.6%; 
+        width: 63.4%;
+        top: 4%; 
+    }
+    .phone{
+        left: 16.6%; 
+        width: 63.4%;
+        top: 5%;
+    }
+
+    .address{
+        left: 16.6%; 
+        width: 63.4%;
+        top: 15%;
+
+    }
+
+    .cityWithZip{
+        left: 15.7%; 
+        width: 30.5%;
+        top: 15%; 
+    }
+
+    
+
+}
+
+
+@media only screen and (max-width: 1100px) {
+
+    .Name{      
+        left: 15%; 
+        width: 30.5%;
+        top: 4.5%;
+    }
+
+    .cityWithZip{
+        left: 15%; 
+        width: 30.5%;
+        top: 15.5%; 
+    }
+
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1050px) {
+
+
+    .popup {       
+        top: 14%;
+        left: 10%;
+        width: 80%;
+          
+    }
+
+        
+    .popup h1{        
+        font-size: 40px;        
+    }
+
+
+    .p1{
+        left: 17%;
+        top: 3%;
+        font-size: 20px;       
+    }
+
+
+    .p2{        
+        left: 17%;
+        top: 11%;
+        font-size: 20px;        
+    }
+
+
+
+    .Name{       
+        left: 15.5%; 
+        width: 30.5%;
+        top: 4%;
+        margin: 6px 8px;
+    }
+
+
+    .email{
+        left: 16.6%; 
+        width: 63.4%;
+        top: 4%; 
+    }
+
+    .phone{
+        left: 16.6%; 
+        width: 63.4%;
+        top: 5%;
+    }
+
+
+    .address{
+        left: 16.6%; 
+        width: 63.4%;
+        top: 15%;
+
+    }
+
+
+    .cityWithZip{
+        left: 15.3%; 
+        width: 30.5%;
+        top: 14.4%; 
+    }
+
+
+    
+}
+
+
+
+
+@media only screen and (max-width: 950px) {
+
+
+    .popup {      
+        top: 14%;
+        left: 10%;
+        width: 80%;       
+    }
+
+        
+    .popup h1{        
+        font-size: 40px;        
+    }
+
+
+    .p1{       
+        left: 17%;
+        top: 3%;
+        font-size: 20px;        
+    }
+
+    
+    .p2{        
+        left: 17%;
+        top: 11%;
+        font-size: 20px;
+        
+    }
+
+
+    .Name{       
+        left: 15.7%; 
+        width: 30.5%;
+        top: 4%;
+    }
+
+
+    .email{
+        left: 16.6%; 
+        width: 64.2%;
+        top: 4%; 
+    }
+
+
+    .phone{
+        left: 16.6%; 
+        width: 64.2%;
+        top: 5%;
+    }
+
+
+
+    .address{
+        left: 16.6%; 
+        width: 64.2%;
+        top: 15%;
+
+    }
+
+    .cityWithZip{
+        left: 15.3%; 
+        width: 30.5%;
+        top: 14.4%; 
+    }
+
+
+
+    .detail_comform_button{        
+        top: 6%;        
+        font-size: 11px;
+        padding: 10px 20px;
+        
+    }
+    
+    .detail_list_close_button{        
+        height: 32px;
+        width: 30%;       
+        font-size: 11px;
+        padding: 10px 20px;
+    
+    }
+
+}
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+
+    .popup {        
+        height: 80%
+
+    }
+
+    
+    .popup h1{       
+        font-size: 30px;        
+    }
+
+    
+    .p1{       
+        left: 12%;
+        top: 3%;
+        font-size: 15px;        
+    }
+
+
+    .p2{        
+        left: 12%;
+        top: 6%;
+        font-size: 15px;        
+    }
+
+
+    
+    .Name{       
+        left: 10%; 
+        width: 80%;
+        top: 4%;
+        padding: 10px 8px; 
+        margin: 3px;    
+    }
+    
+    .email{
+        left: 10%; 
+        width: 80%;
+        top: 4%;
+        padding: 10px 8px; 
+        margin: 3px;
+    }
+
+    .phone{
+        left: 10%; 
+        width: 80%;
+        top: 4%;
+        padding: 10px 8px; 
+        margin: 3px;
+    }
+    
+    .address{
+        left: 10%; 
+        width: 80%;
+        top: 7%;
+        padding: 10px 8px; 
+        margin: 3px;
+    
+    }
+    
+    .cityWithZip{
+        left: 10%; 
+        width: 80%;
+        top: 7%;
+        padding: 10px 8px; 
+        margin: 3px; 
+    }
+    
+    .detail_comform_button{       
+        top: 6%;       
+        font-size: 11px;
+        padding: 10px 20px;
+        
+    }
+    
+    .detail_list_close_button{       
+        height: 32px;
+        width: 30%;      
+        font-size: 11px;
+        padding: 10px 20px;
+    
+    }
+    
+}
+
+
+
+
+    
+
+@media only screen and (max-width: 600px) {
+
+    .popup {        
+        height: 80%; 
+    }
+
+    
+    .popup h1{        
+        font-size: 30px;     
+    }
+    
+    .p1{       
+        left: 12%;
+        top: 3%;
+        font-size: 15px;       
+    }
+
+
+    .p2{      
+        left: 12%;
+        top: 6%;
+        font-size: 15px;       
+    }
+    
+    .Name{       
+        left: 10%; 
+        width: 80%;
+        top: 4%;
+        padding: 10px 8px; 
+        margin: 3px;
+            
+    }
+    
+    .email{
+        left: 10%; 
+        width: 80%;
+        top: 4%;
+        padding: 10px 8px; 
+        margin: 3px;
+    }
+
+    .phone{
+        left: 10%; 
+        width: 80%;
+        top: 4%;
+        padding: 10px 8px; 
+        margin: 3px;
+    }
+    
+    .address{
+        left: 10%; 
+        width: 80%;
+        top: 7%;
+        padding: 10px 8px; 
+        margin: 3px;
+    
+    }
+    
+    .cityWithZip{
+        left: 10%; 
+        width: 80%;
+        top: 7%;
+        padding: 10px 8px; 
+        margin: 3px; 
+    }
+    
+    .detail_comform_button{        
+        width: 30%;       
+        font-size: 11px;
+        padding: 10px 20px;
+        
+    }
+    
+    .detail_list_close_button{       
+        height: 32px;
+        width: 30%;        
+        font-size: 11px;
+        padding: 10px 20px;
+    
+    }
+
+}
+
+
+    
+
+
+@media only screen and (max-width: 400px) {
+
+    .popup {     
+        height: 80%;     
+    }
+
+    
+    .popup h1{        
+        font-size: 30px;        
+    }
+
+
+    
+    .p1{        
+        left: 12%;
+        top: 3%;
+        font-size: 15px;        
+    }
+
+
+    .p2{        
+        left: 12%;
+        top: 6%;
+        font-size: 15px;        
+    }
+
+
+    
+    .Name{        
+        left: 10%; 
+        width: 80%;
+        top: 4%;
+        padding: 10px 8px; 
+        margin: 3px;    
+    }
+
+    
+    .email{
+        left: 10%; 
+        width: 80%;
+        top: 4%;
+        padding: 10px 8px; 
+        margin: 3px;
+    }
+
+    .phone{
+        left: 10%; 
+        width: 80%;
+        top: 4%;
+        padding: 10px 8px; 
+        margin: 3px;
+    }
+
+    
+    .address{
+        left: 10%; 
+        width: 80%;
+        top: 7%;
+        padding: 10px 8px; 
+        margin: 3px;
+    
+    }
+    
+    .cityWithZip{
+        left: 10%; 
+        width: 80%;
+        top: 7%;
+        padding: 10px 8px; 
+        margin: 3px; 
+    }
+
+
+
+    .toggle1Buttons{
+        position: relative;
+        top: 5%;
+        width: 80%;
+    }
+
+    
+    .detail_comform_button{        
+        width: 30%;        
+        font-size: 10px;
+        padding: 10px 20px;
+        
+    }
+
+
+    
+    .detail_list_close_button{
+        width: 30%;        
+        font-size: 10px;
+        padding: 10px 20px;
+    
+    }
+    
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/*Toggle 2 popup styling */
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* Toggale 2 */
+.popup2 {
+    position: fixed;
+    top: 14%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(229, 229, 229);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6); 
+    border-radius: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */ 
+    overflow-x: hidden;
+}
+
+
+/* Active state for the togal */
+.popup2.active {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    top: 14%;
+}
+
+
+/* Heading styling */
+.popup2 h1 {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 300;
+    padding: 20px 0;
+    font-family: "Raleway", sans-serif;
+}
+
+
+/* Discount print styling */
+.popup2 .discount_print {
+    font-size: 28px;
+    font-weight: 450;
+    padding: 10px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Total price with discount styling */
+.popup2 .total_price_with_discount {
+    font-size: 28px;
+    font-weight: 450;
+    padding: 10px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Ordered details styling */
+.popup2 .ordered_details {
+    
+    font-size: 23px;
+    font-weight: 350;
+    padding: 10px 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+}
+
+
+/* Success order button styling */
+.popup2 button.success_order_button {
+    top: 0%;
+    background-color: #ffffff; /* Green */    
+    border: none;
+    width: 30%;
+    position: relative;
+    left:18%;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;  
+    font-size: 16px;
+    margin: 40px 10px;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px rgb(0, 0, 0); 
+    transition: background-color 0.5s ease;
+}
+
+
+/* Order details close button styling */
+.popup2 button.order_details_close_button {
+    top: 0%;
+    background-color: #ffffff; /* Green */    
+    border: none;
+    width: 30%;
+    position: relative;
+    left: 18%;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;  
+    font-size: 16px;
+    margin: 40px 10px;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px rgb(0, 0, 0); 
+    transition: background-color 0.5s ease;
+}
+
+
+.popup2 button.success_order_button:hover,
+.popup2 button.order_details_close_button:hover {
+    background-color: #e1dede;
+    transform: scale(1.01); 
+}
+
+
+
+/* Styling adjustments for smaller screens */
+@media only screen and (max-width: 800px) {
+
+    .popup2 {       
+        height: 80%;       
+    }
+     
+    .popup2 h1 {      
+        font-size: 38px;       
+    }
+   
+    .popup2 .discount_print {
+        font-size: 20px;       
+    }
+        
+    .popup2 .total_price_with_discount {
+        font-size: 20px;       
+    }
+
+    .popup2 .ordered_details {   
+        font-size: 15px;       
+    }
+
+    .popup2 button.success_order_button {      
+        width: 30%;       
+        padding: 10px 25px;         
+        font-size: 10px;        
+    }
+    
+    .popup2 button.order_details_close_button {
+        width: 30%;        
+        padding: 10px 25px;         
+        font-size: 10px;
+    }    
+    
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/*Toggle 3 popup styling */
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* Toggle 3 */
+.popup3 {
+    position: fixed;
+    top: 14%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(255, 255, 255);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.6); 
+    border-radius: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */ 
+    overflow-x: hidden;
+}
+
+
+/* Image styling within the popup */
+.popup3 img {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    left: 35%;
+    top: 8%;   
+}
+
+
+/* Active state for the popup */
+.popup3.active {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    top: 14%;
+}
+
+
+/* Close button styling */
+.popup3 button.success_close_button {
+    top: 15%;
+    background-color: #ffffff; /* Green */    
+    border: none;
+    width: 30%;
+    position: relative;
+    left: 34%;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;  
+    font-size: 16px;
+    margin: 40px 10px;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px rgb(0, 0, 0); 
+    transition: background-color 0.5s ease;
+}
+
+
+
+/* Heading styling */
+.popup3 h1 {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 300;
+    position: relative;
+    top: 12%;
+    font-family: "Raleway", sans-serif;
+}
+
+
+
+/* Hover effect for the close button */
+.popup3 button.success_close_button:hover {
+    background-color: #e1dede;
+    transform: scale(1.01); 
+}
+
+
+
+/* Styling adjustments for smaller screens */
+@media only screen and (max-width: 800px) {
+
+    .popup3 {       
+        height: 80%;     
+    }
+     
+    .popup3 h1 {
+        font-size: 35px;
+        
+        
+    }
+
+    .popup3 button.success_close_button {
+        width: 30%;        
+        padding: 10px 25px;         
+        font-size: 10px;
+    }   
+    
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+/* Footer part Styling */
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+.thank-you h3 {
+    padding-top: 40px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    animation: animateText 3s linear infinite;
+}
+
+@keyframes animateText {
+    0% {
+        color: black;
+    }
+    25% {
+        color: dimgray;
+    }
+    50% {
+        color: rgba(47, 79, 79, 0.8);
+    }
+    75% {
+        color: darkgray ;
+    }
+    100% {
+        color: white;
+    }
+}
+
+footer{
+    margin-top: 10px;
+    background-color: black;
+    padding:.25em 1em;
+}
+.additional-links ul {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.additional-links ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.additional-links ul li a {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 12px;
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.additional-links ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#copyright{
+    /* margin-left:20px; */
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+.social-menu ul{
+    display: flex;
+    padding:20px;
+}
+
+.social-menu ul li{
+    list-style: none;
+    display:inline-block;
+    margin: 0 15px;
+}
+
+.social-menu ul li .fab{
+    font-size: 25px;
+    line-height: 40px;
+    transition: .3s;
+    color: #000;
+}
+
+.social-menu ul li .fab:hover{
+    color: #fff;
+}
+.social-menu ul li a{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    transition: .6s;
+    box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.social-menu ul li a:hover{
+    transform: translate(0, -10%);
+}
+
+.social-menu ul li:nth-child(1) a:hover{
+    background-color: #4267B2;
+}
+.social-menu ul li:nth-child(2) a:hover{
+    background-color: #E4405F;
+}
+.social-menu ul li:nth-child(3) a:hover{
+    background-color: #00ACEE;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+.social-icons li {
+    margin: 0 10px;
+}
+
+
+.box{
+    background: black;
+    display: flex;
+    justify-content: center; /* Add this line */
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
